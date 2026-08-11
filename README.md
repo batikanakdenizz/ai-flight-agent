@@ -333,7 +333,7 @@ Conversation history is stored in-memory (Python dict keyed by `session_id`). Th
 
 This assignment extends the SE4458 Midterm project:
 
-- **Midterm Repo:** https://github.com/batikanakdenizz/airline-ticketing-api
+- **Midterm Repo:** https://github.com/batikanakdenizz/SE4458-AirlineTicketing
 - **Gateway:** https://gateway-midterm-begsgfcubdhxaph0.francecentral-01.azurewebsites.net
 - **API Swagger:** https://api-midterm-bgareudhf2aaakar.francecentral-01.azurewebsites.net/index.html
 

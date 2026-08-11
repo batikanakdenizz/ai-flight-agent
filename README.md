@@ -1,4 +1,4 @@
-# SE4458 – Assignment 2: AI Flight Agent
+# AI Flight Agent
 
 > A conversational AI agent that lets users search flights, book tickets, and check in — all through natural language chat, powered by a local LLM (Ollama) and the SE4458 Airline Ticketing API.
 

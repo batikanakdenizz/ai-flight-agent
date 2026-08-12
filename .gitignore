@@ -33,3 +33,7 @@ Thumbs.db
 
 # Claude Code
 .claude/
+
+# Virtual environments
+.venv/
+venv/

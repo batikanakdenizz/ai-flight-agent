@@ -1,7 +1,7 @@
 import os
 import uuid
 from contextlib import asynccontextmanager
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 from dotenv import load_dotenv
 
@@ -52,7 +52,7 @@ class ChatResponse(BaseModel):
 def root():
     return {
         "status": "AI Flight Agent is running",
-        "time": datetime.utcnow().isoformat(),
+        "time": datetime.now(timezone.utc).isoformat(),
         "mcp_tools": [t["function"]["name"] for t in get_tool_definitions()],
     }
 

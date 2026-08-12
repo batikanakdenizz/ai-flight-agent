@@ -47,7 +47,12 @@ def _to_utc_datetime(date_str: str) -> str:
     date_str = date_str.strip()
     if "T" not in date_str:
         return f"{date_str}T00:00:00Z"
-    if not date_str.endswith("Z") and "+" not in date_str[-6:]:
+    # A trailing offset already carries the timezone; appending Z would produce
+    # something like '...-05:00Z', which the gateway cannot parse. Both signs
+    # have to be checked -- only the last six characters can hold an offset, so
+    # the hyphens inside the date part are never seen here.
+    offset = date_str[-6:]
+    if not date_str.endswith("Z") and "+" not in offset and "-" not in offset:
         return f"{date_str}Z"
     return date_str
 
